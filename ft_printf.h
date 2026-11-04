@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaninas <abaninas@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/27 16:37:38 by abaninas          #+#    #+#             */
+/*   Updated: 2026/11/04 12:53:17 by abaninas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include <unistd.h>
+# include <stdarg.h>
+
+int	ft_printf(const char *format, ...);
+int	ft_print_char(int c);
+int	ft_print_string(char *str);
+int	ft_print_number(int n);
+
+#endif
