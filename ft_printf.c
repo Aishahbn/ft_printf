@@ -6,7 +6,7 @@
 /*   By: abaninas <abaninas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:16:52 by abaninas          #+#    #+#             */
-/*   Updated: 2026/11/04 15:20:47 by abaninas         ###   ########.fr       */
+/*   Updated: 2026/11/05 13:45:53 by abaninas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 static int	handle_format(va_list *args, char specifier)
 {
-	if (!args)
-		return (-1);
 	if (specifier == 's')
 		return (ft_print_string(va_arg(*args, char *)));
 	else if (specifier == 'c')
 		return (ft_print_char(va_arg(*args, int)));
 	else if (specifier == 'd' || specifier == 'i')
 		return (ft_print_number(va_arg(*args, int)));
-	/*else if (specifier == 'p')
-		return (ft_print_number(va_arg(*args, void *)));*/
 	else if (specifier == 'u')
 		return (ft_print_number(va_arg(*args, unsigned int)));
-	else if (specifier == 'x')
-		return (ft_print_number(va_arg(*args, unsigned int)));
+	else if (specifier == 'p')
+		return (ft_print_pointer(va_arg(*args, void *)));
+		else if (specifier == 'x')
+		return (ft_print_hex(va_arg(*args, unsigned int), 0));
 	else if (specifier == 'X')
-		return (ft_print_number(va_arg(*args, unsigned int)));
+		return (ft_print_hex(va_arg(*args, unsigned int), 1));
 	else if (specifier == '%')
 	{
 		write (1, "%", 1);
