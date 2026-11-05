@@ -6,13 +6,13 @@
 /*   By: abaninas <abaninas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:17:17 by abaninas          #+#    #+#             */
-/*   Updated: 2026/11/03 17:17:19 by abaninas         ###   ########.fr       */
+/*   Updated: 2026/11/05 14:18:21 by abaninas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_char(int c)
+int	ft_print_char(int c)
 {
 	char	ch;
 
@@ -20,6 +20,7 @@ int ft_print_char(int c)
 	write(1, &ch, 1);
 	return (1);
 }
+
 int	ft_print_string(char *str)
 {
 	int		i;

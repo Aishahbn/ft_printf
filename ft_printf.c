@@ -6,7 +6,7 @@
 /*   By: abaninas <abaninas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:16:52 by abaninas          #+#    #+#             */
-/*   Updated: 2026/11/05 13:45:53 by abaninas         ###   ########.fr       */
+/*   Updated: 2026/11/05 14:17:46 by abaninas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	handle_format(va_list *args, char specifier)
 		return (ft_print_number(va_arg(*args, unsigned int)));
 	else if (specifier == 'p')
 		return (ft_print_pointer(va_arg(*args, void *)));
-		else if (specifier == 'x')
+	else if (specifier == 'x')
 		return (ft_print_hex(va_arg(*args, unsigned int), 0));
 	else if (specifier == 'X')
 		return (ft_print_hex(va_arg(*args, unsigned int), 1));
@@ -33,7 +33,7 @@ static int	handle_format(va_list *args, char specifier)
 		write (1, "%", 1);
 		return (1);
 	}
-		return (0);
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
